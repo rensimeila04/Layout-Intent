@@ -4,17 +4,22 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 public class MainActivity extends AppCompatActivity {
+    TextView title;
+    private String txtTitle = "Linear Layout";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loadFragment(new LinearFragment());
+        title = findViewById(R.id.title);
+        title.setText(txtTitle);
     }
 
     private boolean loadFragment(Fragment fragment) {
@@ -37,12 +42,15 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.linearLayout:
                         fr = new LinearFragment();
+                        title.setText("Linear Layout");
                         break;
                     case R.id.relativeLayout:
                         fr = new RelativeFragment();
+                        title.setText("Relative Layout");
                         break;
                     case R.id.intent:
                         fr = new IntentFragment();
+                        title.setText("Intent");
                         break;
                 }
                 return loadFragment(fr);

@@ -7,18 +7,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class TargetActivity extends AppCompatActivity {
 
-    TextView txtResult;
+    TextView txtHello;
     private String nama;
-    private String EXTRA_DATA = "EXTRA_DATA";
+    private String KEY_NAME = "NAMA";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_target);
-        txtResult = findViewById(R.id.textHai);
+        txtHello = findViewById(R.id.txtHello);
 
         Bundle extras = getIntent().getExtras();
-        nama = extras.getString(EXTRA_DATA);
-        txtResult.setText("Hello, " + nama + " !");
+        nama = extras.getString(KEY_NAME);
+        txtHello.setText("Hello, " + nama + " !");
+
     }
 }

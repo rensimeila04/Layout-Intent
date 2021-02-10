@@ -14,16 +14,18 @@ import androidx.fragment.app.Fragment;
 
 public class IntentFragment extends Fragment {
 
-    private EditText editText;
-    private Button btnSenData;
-    private String EXTRA_DATA = "EXTRA_DATA";
+    EditText name;
+    Button btnSend;
+
+    private String KEY_NAME = "NAMA";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_intent, container, false);
-        btnSenData = view.findViewById(R.id.buttonsen);
-        btnSenData.setOnClickListener(new View.OnClickListener() {
+        name = view.findViewById(R.id.edt_nama);
+        btnSend = view.findViewById(R.id.btn_send);
+        btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ayo();
@@ -34,10 +36,10 @@ public class IntentFragment extends Fragment {
 
     private void ayo() {
         try {
-            String nama = editText.getText().toString();
+            String nama = name.getText().toString();
             if (nama != null && nama != "") {
-                Intent i = new Intent(getActivity(), TargetActivity.class);
-                i.putExtra(EXTRA_DATA, nama);
+                Intent i = new Intent(getContext(), TargetActivity.class);
+                i.putExtra(KEY_NAME, nama);
                 startActivity(i);
 
             } else {
