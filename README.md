@@ -1,4 +1,8 @@
 # Layout And Intent
+<p align="center">
+  <a <code><img width="35%" src="https://github.com/rensimeila04/Layout-Intent/blob/master/ezgif.com-gif-maker.gif"></code>
+  </a>
+</p>
 
 ## Layout
 > Layout merupakan suatu tampilan tata letak di Android untuk mengatur penempatan teks, gambar, ataupun komponen lainnya sehingga tampilan pada aplikasi yang dibuat terlihat rapih dan nyaman untuk dilihat oleh pengguna.
@@ -45,3 +49,10 @@
 - Method onRestart() adalah kondisi saat Activity kembali dibuka oleh pengguna.Jika aktivitas kembali di lakukan, sistem akan memanggil onRestart(). Jika Activity selesai berjalan, sistem akan memanggil onDestroy(). Bagian selanjutnya menjelaskan callback onDestroy().
 
 - Method onDestroy() adalah kondisi saat Activity dihancurkan pada memori.Saat aktivitas berpindah ke status ditutup, komponen berbasis siklus proses apa pun yang terkait dengan siklus proses aktivitas akan menerima peristiwa ON_DESTROY. Di sinilah komponen siklus proses dapat membersihkan apa pun yang diperlukan sebelum Aktivitas ditutup.
+
+<p align="center">
+  <a <code><img width="10%" src="https://www.vectorlogo.zone/logos/java/java-ar21.svg"></code>
+  </a>
+  <a <code><img width="10%" src="https://www.vectorlogo.zone/logos/android/android-ar21.svg"></code>
+  </a>
+ </p>
